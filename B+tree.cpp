@@ -7,6 +7,7 @@ struct BPlusTree {
         int M;
         bool isLeaf;
         vector<int> keys; // max keys M, min keys M/2
+        vector<Node*> children; // vector de punteros a Node
         Node* next; // puntero al siguiente nodo hoja
         Node(int order): M(order), isLeaf(true), next(nullptr) {}
     };
